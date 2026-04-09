@@ -12,12 +12,12 @@ if (projects.length === 0) {
 let selectedProjectId = projects[0].id;
 
 export function updateTodo(projectId, todoId, updateData) {
-    const project = projects.find(p => p.id === projectId);
-    const todo = project.todos.find(t => t.id === todoId);
+  const project = projects.find((p) => p.id === projectId);
+  const todo = project.todos.find((t) => t.id === todoId);
 
-    Object.assign(todo, updateData);
+  Object.assign(todo, updateData);
 
-    saveProjects(projects);
+  saveProjects(projects);
 }
 
 export function getSelectedProject() {
